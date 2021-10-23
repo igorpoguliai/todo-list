@@ -1,0 +1,110 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.container {
+  max-width: 570px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+.header {
+  background-image: url(mountain.png);
+  background-color: #a88eca;
+  background-size: cover;
+  height: 300px;
+  padding-top: 60px;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 73px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.header__input {
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 60px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #4F4F4F;
+  padding-left: 24px;
+  text-transform: capitalize;
+  outline: none;
+}
+
+.list {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -80px;
+  background: #FFFFFF;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.list__item {
+  border: 1px solid #EAEAEA;
+  font-family: Montserrat, sans-serif;
+  color: #4F4F4F;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 19px 24px 16px;
+}
+
+.list__item-checkbox {
+  border: 1px solid #C2C2C2;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 14px;
+}
+
+.list__item--checked .list__item-checkbox {
+  background: linear-gradient(124.99deg, rgba(192, 115, 253, 0.47) 6.18%, #9F3294 6.19%, rgba(113, 111, 255, 0.47) 93.82%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list__item--checked .list__item-text {
+  text-decoration: line-through;
+  color: #C2C2C2;
+}
+
+.list .list__item-remove {
+  margin-left: auto;
+  opacity: 0;
+  border: none;
+  background: none;
+}
+
+.list .list__item:hover .list__item-remove {
+  opacity: 1;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

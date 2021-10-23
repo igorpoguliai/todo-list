@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+$main-font: Montserrat, sans-serif;
+$main-color: #FFFFFF;
+$second-color: #4F4F4F;
+
+body {
+  font-family: $main-font;
+}
+
+.container {
+  max-width: 570px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+// HEADER
+.header {
+  background-image: url(mountain.png);
+  background-color: #a88eca;
+  background-size: cover;
+  height: 300px;
+  padding-top: 60px;
+
+    &__title {
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 73px;
+      color: $main-color;
+      text-transform: uppercase;
+  }
+
+    &__input {
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      height: 60px;
+      font-family: $main-font;
+      font-size: 16px;
+      line-height: 21px;
+      color: $second-color;
+      padding-left: 24px;
+      text-transform: capitalize;
+      outline: none;
+  }
+}
+// END HEADER
+
+// MAIN
+.list {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -80px;
+  background: #FFFFFF;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+
+    &__item {
+      border: 1px solid #EAEAEA;
+      font-family: $main-font;
+      color: $second-color;
+      font-size: 16px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      padding: 19px 24px 16px;
+
+      &-checkbox {
+        border: 1px solid #C2C2C2;
+        border-radius: 50%;
+        min-width: 20px;
+        height: 20px;
+        margin-right: 14px;
+      }
+    }
+
+        &__item--checked {
+          .list__item-checkbox {
+            background: linear-gradient(124.99deg, rgba(192, 115, 253, 0.47) 6.18%, #9F3294 6.19%, rgba(113, 111, 255, 0.47) 93.82%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .list__item-text {
+            text-decoration: line-through;
+            color: #C2C2C2;
+          }
+        }
+
+        .list__item-remove {
+          margin-left: auto;
+          opacity: 0;
+          border: none;
+          background: none;
+        }
+
+        .list__item:hover {
+          .list__item-remove {
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+}
+// END MAIN
