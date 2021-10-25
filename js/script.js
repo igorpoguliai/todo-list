@@ -1,17 +1,22 @@
 const input = document.getElementById('input-value');
 const list = document.getElementById('list');
 const form = document.getElementById('form');
-const notes = [];
+let notes = [];
 
-
+if (localStorage.getItem('todo-list')) {
+  notes = JSON.parse(localStorage.getItem('todo-list'));
+  addNotes();
+}
 
 form.addEventListener('submit', event => {
+
   event.preventDefault();
-    let newNote = {
+    const newNote = {
     note: input.value,
     checked: false,
     id: Math.random(),
   }
+
   input.value = '';
   notes.push(newNote);
   addNotes();
@@ -22,6 +27,7 @@ function addNotes() {
   let message = '';
 
   notes.forEach((item, index) => {
+
     message += `
     <li class="list__item ${item.checked ? 'list__item--checked' : ''}">
           <div class="list__item-checkbox">
@@ -39,6 +45,7 @@ function addNotes() {
           </button>
         </li>
     `;
+
     list.innerHTML = message;
   })
 }
