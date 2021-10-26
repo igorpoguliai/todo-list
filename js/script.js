@@ -29,7 +29,7 @@ function addNotes() {
   notes.forEach((item, index) => {
 
     message += `
-    <li class="list__item ${item.checked ? 'list__item--checked' : ''}">
+    <li class="list__item ${item.checked ? 'list__item--checked' : ''}" onclick='toggleIsChecked(${item.id})'>
           <div class="list__item-checkbox">
             <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.71866 5.71866L1.75 4.75C1.61193 4.61193 1.38807 4.61193 1.25 4.75C1.11193 4.88807 1.11193 5.11193 1.25 5.25L2.72569 6.72569C3.1415 7.1415 3.82457 7.11051 4.20102 6.65877L8.29517 1.7458C8.41118 1.60659 8.40189 1.40189 8.27376 1.27376C8.12718 1.12718 7.8861 1.13921 7.75484 1.29964L4.19972 5.64479C3.82508 6.10268 3.137 6.137 2.71866 5.71866Z" stroke="white"/>
@@ -48,4 +48,18 @@ function addNotes() {
 
     list.innerHTML = message;
   })
+}
+
+function toggleIsChecked(id) {
+  notes = notes.map(item => {
+
+    if (item.id === id) {
+      return {note: item.note, checked: !item.checked, id: item.id,};
+    } else {
+      return item;
+    }
+  })
+  
+  addNotes();
+  localStorage.setItem('todo-list', JSON.stringify(notes));
 }
