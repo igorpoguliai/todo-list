@@ -6,6 +6,7 @@ let notes = [];
 appInit();
 
 form.addEventListener('submit', event => {
+
   event.preventDefault();
 
     const newNote = {
@@ -20,9 +21,11 @@ form.addEventListener('submit', event => {
 })
 
 function drawNotes() {
+
   let message = '';
 
   notes.forEach((item) => {
+
     message += `
     <li class="list__item ${item.checked ? 'list__item--checked' : ''}" onclick='toggleIsChecked(${item.id})'>
           <div class="list__item-checkbox">
@@ -58,7 +61,7 @@ function appInit() {
 function toggleIsChecked(id) {
 
   notes = notes.map(item => {
-    
+
     if (item.id === id) {
       return {note: item.note, checked: !item.checked, id: item.id,};
     } else {
