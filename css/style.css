@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  background-image: url(/mountain.png);
+  background-image: url(/images/mountain.png);
   background-color: #b57dff;
   background-size: cover;
   height: 300px;
