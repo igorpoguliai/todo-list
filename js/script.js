@@ -3,14 +3,11 @@ const list = document.getElementById('list');
 const form = document.getElementById('form');
 let notes = [];
 
-if (localStorage.getItem('todo-list')) {
-  notes = JSON.parse(localStorage.getItem('todo-list'));
-  addNotes();
-}
+appInit();
 
 form.addEventListener('submit', event => {
-
   event.preventDefault();
+
     const newNote = {
     note: input.value,
     checked: false,
@@ -19,15 +16,13 @@ form.addEventListener('submit', event => {
 
   input.value = '';
   notes.push(newNote);
-  addNotes();
-  localStorage.setItem('todo-list', JSON.stringify(notes));
+  drawNotes();
 })
 
-function addNotes() {
+function drawNotes() {
   let message = '';
 
-  notes.forEach((item, index) => {
-
+  notes.forEach((item) => {
     message += `
     <li class="list__item ${item.checked ? 'list__item--checked' : ''}" onclick='toggleIsChecked(${item.id})'>
           <div class="list__item-checkbox">
@@ -47,7 +42,17 @@ function addNotes() {
     `;
 
     list.innerHTML = message;
+    localStorage.setItem('todo-list', JSON.stringify(notes));
   })
+}
+
+function appInit() {
+
+  if (localStorage.getItem('todo-list')) {
+    notes = JSON.parse(localStorage.getItem('todo-list'));
+
+    drawNotes();
+  }
 }
 
 function toggleIsChecked(id) {
@@ -60,6 +65,5 @@ function toggleIsChecked(id) {
     }
   })
   
-  addNotes();
-  localStorage.setItem('todo-list', JSON.stringify(notes));
+  drawNotes();
 }
