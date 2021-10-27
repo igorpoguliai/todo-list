@@ -56,8 +56,9 @@ function appInit() {
 }
 
 function toggleIsChecked(id) {
-  notes = notes.map(item => {
 
+  notes = notes.map(item => {
+    
     if (item.id === id) {
       return {note: item.note, checked: !item.checked, id: item.id,};
     } else {
