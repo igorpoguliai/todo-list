@@ -68,6 +68,17 @@ body {
       align-items: center;
       padding: 19px 24px 16px;
 
+      &-text {
+        max-width: 300px;
+        width: 100%;
+        word-wrap: break-word;
+      }
+
+      &-date {
+        font-size: 13px;
+        margin-left: auto;
+      }
+
       &-checkbox {
         border: 1px solid #C2C2C2;
         border-radius: 50%;
@@ -85,7 +96,7 @@ body {
             align-items: center;
           }
 
-          .list__item-text {
+          .list__item-text, .list__item-date {
             text-decoration: line-through;
             color: #C2C2C2;
           }
@@ -93,15 +104,15 @@ body {
 
         .list__item-remove {
           margin-left: auto;
-          opacity: 0;
           border: none;
           background: none;
+          cursor: pointer;
+          margin-right: -65px;
         }
 
         .list__item:hover {
           .list__item-remove {
-            opacity: 1;
-            cursor: pointer;
+            margin-right: 0px;
           }
         }
 }
