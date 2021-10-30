@@ -1,7 +1,7 @@
 const input = document.getElementById('input-value');
 const list = document.getElementById('list');
 const form = document.getElementById('form');
-let date = new Date().toLocaleString();
+let date = new Date().toLocaleString().slice(0, -3);
 let notes = [];
 
 appInit();
@@ -14,6 +14,7 @@ form.addEventListener('submit', event => {
     note: input.value,
     checked: false,
     id: Math.random(),
+    addetDate: date,
   }
 
   input.value = '';
@@ -38,7 +39,7 @@ function drawNotes() {
             ${item.note}
           </div>
           <div class="list__item-date">
-            ${date}
+            ${item.addetDate}
           </div>
           <button class="list__item-remove">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +67,7 @@ function toggleIsChecked(clickedItemId) {
 
   notes = notes.map(item => {
 
-    const {note, checked, id,} = item;
+    const {note, checked, id, addetDate,} = item;
     if (id === clickedItemId) {
       return {...item, checked: !checked,}
     } else {
