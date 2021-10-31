@@ -1,7 +1,6 @@
 const input = document.getElementById('input-value');
 const list = document.getElementById('list');
 const form = document.getElementById('form');
-let date = new Date().toLocaleString().slice(0, -3);
 let notes = [];
 
 appInit();
@@ -14,7 +13,7 @@ form.addEventListener('submit', event => {
     note: input.value,
     checked: false,
     id: Math.random(),
-    addetDate: date,
+    addetDate: new Date().toLocaleString().slice(0, -3),
   }
 
   input.value = '';
@@ -48,10 +47,10 @@ function drawNotes() {
           </button>
     </li>
     `;
-
-    list.innerHTML = message;
-    localStorage.setItem('todo-list', JSON.stringify(notes));
   })
+
+  list.innerHTML = message;
+  localStorage.setItem('todo-list', JSON.stringify(notes));
 }
 
 function appInit() {
