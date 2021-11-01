@@ -68,6 +68,14 @@ body {
   text-transform: uppercase;
 }
 
+.header .buttons__item:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  background-color: #e5e5e5;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
 .list {
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
