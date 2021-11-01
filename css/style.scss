@@ -45,6 +45,29 @@ body {
       padding-left: 24px;
       outline: none;
   }
+
+  .buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 7px;
+
+    &__item {
+      font-family: $main-font;
+      font-size: 12px;
+      line-height: 16px;
+      color: $second-color;
+      border: none;
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 3px 0px;
+      cursor: pointer;
+      width: 100%;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 // END HEADER
 
@@ -52,7 +75,7 @@ body {
 .list {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: -80px;
+  top: -65px;
   background: #FFFFFF;
   cursor: pointer;
   border-radius: 4px;
