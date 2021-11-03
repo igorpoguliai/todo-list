@@ -1,6 +1,10 @@
 const input = document.getElementById('input-value');
 const list = document.getElementById('list');
 const form = document.getElementById('form');
+const buttonDelete = document.getElementById('button-delete');
+const buttonMakeDone = document.getElementById('button-make-done');
+const buttonSortDate = document.getElementById('button-sort-date');
+const buttonSortAlphabet = document.getElementById('button-sort-alphabet');
 let notes = [];
 
 appInit();
@@ -84,3 +88,35 @@ function clickedItemRemove(itemRemoveId) {
 
   drawNotes();
   }
+
+  buttonDelete.addEventListener('click', function() {
+
+    notes = notes.filter(item => !item.checked);
+
+    drawNotes();
+  })
+
+  buttonMakeDone.addEventListener('click', function() {
+
+    const isEveryChecked = notes.every(item => item.checked === true);
+
+    notes = notes.map(item => {
+      return {...item, checked: isEveryChecked ? false : true};
+    })
+
+    drawNotes();
+  })
+
+  buttonSortDate.addEventListener('click', function() {
+
+    notes = notes.sort((a, b) => new Date(b.addetDate) - new Date(a.addetDate));
+
+    drawNotes();
+  })
+
+  buttonSortAlphabet.addEventListener('click', function() {
+
+    notes = notes.sort((a, b) => a.note.localeCompare(b.note));
+
+    drawNotes();
+  })
