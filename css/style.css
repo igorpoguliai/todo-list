@@ -139,15 +139,66 @@ body {
   color: #C2C2C2;
 }
 
-.list .list__item-remove {
+.list__item-remove {
   margin-left: auto;
   border: none;
   background: none;
   cursor: pointer;
-  margin-right: -50px;
 }
 
-.list .list__item:hover .list__item-remove {
-  margin-right: 0px;
+.list__item-remove svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding-top: 40px;
+    height: 235px;
+  }
+  .header__title {
+    font-size: 41px;
+    line-height: 58px;
+  }
+  .header__input {
+    height: 45px;
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 10px;
+  }
+  .header .buttons__item {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px 0px;
+  }
+}
+
+.list {
+  top: -40px;
+}
+
+.list__item {
+  font-size: 14px;
+  line-height: 19px;
+  padding: 7px 10px;
+}
+
+.list__item-text {
+  max-width: 100px;
+}
+
+.list__item-date {
+  font-size: 11px;
+}
+
+.list__item-checkbox {
+  min-width: 16px;
+  height: 16px;
+  margin-right: 7px;
+}
+
+.list__item-remove svg {
+  width: 11px;
+  height: 11px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -131,18 +131,78 @@ body {
           }
         }
 
-        .list__item-remove {
-          margin-left: auto;
-          border: none;
-          background: none;
-          cursor: pointer;
-          margin-right: -50px;
-        }
+        // .list__item:hover {
+        //   .list__item-remove {
+        //     margin-right: 0px;
+        //   }
+        // }
+}
 
-        .list__item:hover {
-          .list__item-remove {
-            margin-right: 0px;
-          }
-        }
+.list__item-remove {
+  margin-left: auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.list__item-remove svg {
+  width: 14px;
+  height: 14px;
+  // margin-right: -50px;
 }
 // END MAIN
+
+// MEDIA
+@media (max-width: 500px) {
+  .header {
+    padding-top: 40px;
+    height: 235px;
+
+    &__title {
+      font-size: 41px;
+      line-height: 58px;
+    }
+
+    &__input {
+      height: 45px;
+      font-size: 14px;
+      line-height: 19px;
+      padding-left: 10px;
+    }
+
+  .buttons__item {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px 0px;
+  }
+}
+}
+
+  .list {
+    top: -40px;
+
+    &__item {
+      font-size: 14px;
+      line-height: 19px;
+      padding: 7px 10px;
+
+      &-text {
+        max-width: 100px;
+      }
+
+      &-date {
+        font-size: 11px;
+      }
+
+      &-checkbox {
+        min-width: 16px;
+        height: 16px;
+        margin-right: 7px;
+      }
+    }
+  }
+
+  .list__item-remove svg {
+    width: 11px;
+    height: 11px;
+  }
