@@ -151,7 +151,202 @@ body {
   height: 14px;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 1290px) {
+  .list__item-remove {
+    margin-left: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: -50px;
+  }
+  .list__item:hover .list__item-remove {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 540px) {
+  .list {
+    top: -65px;
+  }
+  .list__item-text {
+    max-width: 295px;
+    margin-right: auto;
+  }
+  .list__item-text-date {
+    margin: 0px;
+  }
+  .list__item-text-remove {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 512px) {
+  .list {
+    top: -65px;
+  }
+  .list__item-text {
+    max-width: 275px;
+    margin-right: auto;
+  }
+  .list__item-text-date {
+    margin: 0px;
+  }
+  .list__item-text-remove {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 414px) {
+  .header {
+    padding-top: 55px;
+    height: 235px;
+  }
+  .header__title {
+    font-size: 41px;
+    line-height: 58px;
+  }
+  .header__input {
+    height: 45px;
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 10px;
+  }
+  .header .buttons__item {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px 0px;
+  }
+  .list {
+    top: -40px;
+  }
+  .list__item {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 7px 10px;
+  }
+  .list__item-text {
+    max-width: 230px;
+    margin-right: auto;
+  }
+  .list__item-date {
+    font-size: 11px;
+    margin: 0px;
+  }
+  .list__item-checkbox {
+    min-width: 16px;
+    height: 16px;
+    margin-right: 7px;
+  }
+  .list__item-remove {
+    margin: 0px;
+  }
+  .list__item-remove svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    padding-top: 40px;
+    height: 235px;
+  }
+  .header__title {
+    font-size: 41px;
+    line-height: 58px;
+  }
+  .header__input {
+    height: 45px;
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 10px;
+  }
+  .header .buttons__item {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px 0px;
+  }
+  .list {
+    top: -40px;
+  }
+  .list__item {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 7px 10px;
+  }
+  .list__item-text {
+    max-width: 190px;
+    margin-right: auto;
+  }
+  .list__item-date {
+    font-size: 11px;
+    margin: 0px;
+  }
+  .list__item-checkbox {
+    min-width: 16px;
+    height: 16px;
+    margin-right: 7px;
+  }
+  .list__item-remove {
+    margin: 0px;
+  }
+  .list__item-remove svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    padding-top: 40px;
+    height: 235px;
+  }
+  .header__title {
+    font-size: 41px;
+    line-height: 58px;
+  }
+  .header__input {
+    height: 45px;
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 10px;
+  }
+  .header .buttons__item {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px 0px;
+  }
+  .list {
+    top: -40px;
+  }
+  .list__item {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 7px 10px;
+  }
+  .list__item-text {
+    max-width: 175px;
+    margin-right: auto;
+  }
+  .list__item-date {
+    font-size: 11px;
+    margin: 0px;
+  }
+  .list__item-checkbox {
+    min-width: 16px;
+    height: 16px;
+    margin-right: 7px;
+  }
+  .list__item-remove {
+    margin: 0px;
+  }
+  .list__item-remove svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+@media (max-width: 320px) {
   .header {
     padding-top: 40px;
     height: 235px;
@@ -201,16 +396,53 @@ body {
   }
 }
 
-@media (min-width: 1300px) {
-  .list__item-remove {
-    margin-left: auto;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-right: -50px;
+@media (max-width: 280px) {
+  .header {
+    padding-top: 40px;
+    height: 235px;
   }
-  .list__item:hover .list__item-remove {
-    margin-right: 0px;
+  .header__title {
+    font-size: 41px;
+    line-height: 58px;
+  }
+  .header__input {
+    height: 45px;
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 10px;
+  }
+  .header .buttons__item {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px 0px;
+  }
+  .list {
+    top: -40px;
+  }
+  .list__item {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 7px 10px;
+  }
+  .list__item-text {
+    max-width: 100px;
+    margin-right: auto;
+  }
+  .list__item-date {
+    font-size: 11px;
+    margin: 0px;
+  }
+  .list__item-checkbox {
+    min-width: 16px;
+    height: 16px;
+    margin-right: 7px;
+  }
+  .list__item-remove {
+    margin: 0px;
+  }
+  .list__item-remove svg {
+    width: 11px;
+    height: 11px;
   }
 }
 /*# sourceMappingURL=style.css.map */
