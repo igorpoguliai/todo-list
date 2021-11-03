@@ -130,12 +130,6 @@ body {
             color: #C2C2C2;
           }
         }
-
-        // .list__item:hover {
-        //   .list__item-remove {
-        //     margin-right: 0px;
-        //   }
-        // }
 }
 
 .list__item-remove {
@@ -148,7 +142,6 @@ body {
 .list__item-remove svg {
   width: 14px;
   height: 14px;
-  // margin-right: -50px;
 }
 // END MAIN
 
@@ -176,7 +169,6 @@ body {
     padding: 1px 0px;
   }
 }
-}
 
   .list {
     top: -40px;
@@ -187,11 +179,13 @@ body {
       padding: 7px 10px;
 
       &-text {
-        max-width: 100px;
+        max-width: 140px;
+        margin-right: auto;
       }
 
       &-date {
         font-size: 11px;
+        margin: 0px;
       }
 
       &-checkbox {
@@ -202,7 +196,29 @@ body {
     }
   }
 
+  .list__item-remove {
+    margin: 0px;
+  }
+
   .list__item-remove svg {
     width: 11px;
     height: 11px;
   }
+}
+
+  @media (min-width: 1300px) {
+    .list__item-remove {
+      margin-left: auto;
+      border: none;
+      background: none;
+      cursor: pointer;
+      margin-right: -50px;
+    }
+
+    .list__item:hover {
+      .list__item-remove {
+        margin-right: 0px;
+      }
+    }
+  }
+  // END MEDIA
