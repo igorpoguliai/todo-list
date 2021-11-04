@@ -169,7 +169,7 @@ body {
     top: -65px;
   }
   .list__item-text {
-    max-width: 295px;
+    max-width: 285px;
     margin-right: auto;
   }
   .list__item-text-date {
@@ -185,7 +185,7 @@ body {
     top: -65px;
   }
   .list__item-text {
-    max-width: 265px;
+    max-width: 255px;
     margin-right: auto;
   }
   .list__item-text-date {
@@ -225,7 +225,7 @@ body {
     padding: 7px 10px;
   }
   .list__item-text {
-    max-width: 235px;
+    max-width: 225px;
     margin-right: auto;
   }
   .list__item-date {
@@ -275,7 +275,7 @@ body {
     padding: 7px 10px;
   }
   .list__item-text {
-    max-width: 230px;
+    max-width: 220px;
     margin-right: auto;
   }
   .list__item-date {
@@ -325,7 +325,7 @@ body {
     padding: 7px 10px;
   }
   .list__item-text {
-    max-width: 190px;
+    max-width: 180px;
     margin-right: auto;
   }
   .list__item-date {
@@ -375,7 +375,7 @@ body {
     padding: 7px 10px;
   }
   .list__item-text {
-    max-width: 175px;
+    max-width: 165px;
     margin-right: auto;
   }
   .list__item-date {
@@ -425,7 +425,7 @@ body {
     padding: 7px 10px;
   }
   .list__item-text {
-    max-width: 130px;
+    max-width: 120px;
     margin-right: auto;
   }
   .list__item-date {
@@ -475,7 +475,7 @@ body {
     padding: 7px 10px;
   }
   .list__item-text {
-    max-width: 90px;
+    max-width: 80px;
     margin-right: auto;
   }
   .list__item-date {
