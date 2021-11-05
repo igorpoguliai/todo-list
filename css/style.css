@@ -102,6 +102,10 @@ body {
   padding: 19px 24px 16px;
 }
 
+.list__item:last-child {
+  border-radius: 0px 0px 4px 4px;
+}
+
 .list__item-text {
   max-width: 320px;
   width: 100%;
